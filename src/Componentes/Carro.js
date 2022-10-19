@@ -1,12 +1,13 @@
-function Carro() {
+import React from "react";
+function Carro(props) {
   return (
     <div>
-      <h2>Volksvagem</h2>
+      <h2>{props.nomeProprio}</h2>
       <ul>
-        <li>Cor: Azul</li>
-        <li>Ano: 2018</li>
-        <li>Flex: Não</li>
-      </ul>
+        <li>Modelo:{props.carro.ano}</li>
+        <li>Cor:{props.carro.color}</li>
+        <li>Flex?:{props.carro.flex?"sim" :"nao"}</li>
+       </ul>
     </div>
   );
 }
